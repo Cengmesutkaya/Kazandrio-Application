@@ -20,12 +20,12 @@ namespace Kazandrio_Application.Jobs
 
                 var options = new AppiumOptions();
                 options.PlatformName = "Android";
-                options.DeviceName = "tghemfszhbijn4h8l?ss";
+                options.DeviceName = "tghemfzsdrfhbijn4h8l";
                 options.PlatformVersion = "10.0";
                 options.AddAdditionalAppiumOption("appPackage", "com.pepsico.kazandirio");
                 options.AddAdditionalAppiumOption("appActivity", ".MainActivity");
 
-                AndroidDriver driver = new AndroidDriver(new Uri("http://127.0.0.1:4723/wd/hub"), options);
+                AndroidDriver driver = new AndroidDriver(new Uri("http://192.168.1.103:4723/wd/hub"), options);
 
                 IWebElement okutKazanButton = driver.FindElement(By.Id("com.pepsico.kazandirio:id/navigation_bar_item_labels_group"));
                 okutKazanButton.Click();
